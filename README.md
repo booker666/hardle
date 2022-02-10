@@ -1,10 +1,14 @@
-# Word Guessing Game - NBAdle
+# Word Guessing Game - hardle
 
 This is a modified version of an open source react-wordle repo (https://github.com/cwackerfuss/react-wordle)
 
 The goal is to guess an 5 letter word in 10 tries.
 
-In addition, there will be hints popping up when your guess is wrong in 3, 6, 9 rounds.
+In hardle, your vision and information will be limited.
+By default, the letter will not show green or yellow like original wordle, it will show blue to indicate the letter is in the answer, regardless of the correctness of position. You can press the unlock icon to disable this feature.
+By default, not all letters of your input will be compared to the answer, there will be some blind spots information is unknown. You can press the eye icon to disable this feature.
+
+In addition, there will be hints popping up when your guess is wrong in 5, 7, 9 rounds.
 You can check the hints by clicking the lightbulb icon.
 
 [**Try out hardle!**](https://booker666.github.io/hardle/)
