@@ -26,6 +26,8 @@ export const CompletedRow = ({ guess, hardMode, blindMode, round }: Props) => {
       {guess.split('').map((letter, i) => {
         if (blindMode) {
           if (statuses[i] === 'masked')
+            return <CompletedCell key={i} value={letter} hardMode={hardMode} />
+          else
             return (
               <CompletedCell
                 key={i}
@@ -34,8 +36,6 @@ export const CompletedRow = ({ guess, hardMode, blindMode, round }: Props) => {
                 hardMode={hardMode}
               />
             )
-          else
-            return <CompletedCell key={i} value={letter} hardMode={hardMode} />
         } else {
           return (
             <CompletedCell

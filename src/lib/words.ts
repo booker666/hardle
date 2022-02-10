@@ -37,8 +37,8 @@ export const maskGuess = (guess: string, round: number) => {
   const masks = mask_list[round % 4]
   var masked_guess = ''
   guess.split('').forEach((letter, i) => {
-    if (masks.includes(i)) masked_guess += letter
-    else masked_guess += ' '
+    if (masks.includes(i)) masked_guess += ' '
+    else masked_guess += letter
   })
   return masked_guess
 }
