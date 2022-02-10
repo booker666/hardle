@@ -10,8 +10,8 @@ type Props = {
 
 export const HintsModal = ({ isOpen, handleClose, guesses }: Props) => {
   var guess_count = guesses.length
-  if (guess_count >= 3) {
-    if (guess_count >= 6) {
+  if (guess_count >= 5) {
+    if (guess_count >= 7) {
       if (guess_count >= 9) {
         return (
           <BaseModal
@@ -20,10 +20,10 @@ export const HintsModal = ({ isOpen, handleClose, guesses }: Props) => {
             handleClose={handleClose}
           >
             <p className="text-sm text-gray-500 dark:text-gray-300">
-              1. first letter is {hints[0]}
+              1. last letter is {hints[0]}
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-300">
-              2. last letter is {hints[1]}
+              2. first letter is {hints[1]}
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-300">
               3. middle letter is {hints[2]}
@@ -38,10 +38,10 @@ export const HintsModal = ({ isOpen, handleClose, guesses }: Props) => {
           handleClose={handleClose}
         >
           <p className="text-sm text-gray-500 dark:text-gray-300">
-            1. first letter is {hints[0]}
+            1. last letter is {hints[0]}
           </p>
           <p className="text-sm text-gray-500 dark:text-gray-300">
-            2. last letter is {hints[1]}
+            2. first letter is {hints[1]}
           </p>
         </BaseModal>
       )
@@ -49,7 +49,7 @@ export const HintsModal = ({ isOpen, handleClose, guesses }: Props) => {
     return (
       <BaseModal title={HINTS_TITLE} isOpen={isOpen} handleClose={handleClose}>
         <p className="text-sm text-gray-500 dark:text-gray-300">
-          1. first letter is {hints[0]}
+          1. last letter is {hints[0]}
         </p>
       </BaseModal>
     )

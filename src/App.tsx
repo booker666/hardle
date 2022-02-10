@@ -62,7 +62,7 @@ function App() {
       : false
   )
   const [isHardMode, setIsHardMode] = useState(true)
-  const [isBlindMode, setIsBlindMode] = useState(false)
+  const [isBlindMode, setIsBlindMode] = useState(true)
   const [successAlert, setSuccessAlert] = useState('')
   const [guesses, setGuesses] = useState<string[]>(() => {
     const loaded = loadGameStateFromLocalStorage()
@@ -166,10 +166,6 @@ function App() {
       setGuesses([...guesses, currentGuess])
       setCurrentGuess('')
 
-      if ([2, 5, 8].includes(guesses.length)) {
-        setIsHintsModalOpen(true)
-      }
-
       if (winningWord) {
         setStats(addStatsForCompletedGame(stats, guesses.length))
         setIsHardMode(false)
@@ -180,6 +176,10 @@ function App() {
       if (guesses.length === MAX_CHALLENGES - 1) {
         setStats(addStatsForCompletedGame(stats, guesses.length + 1))
         setIsGameLost(true)
+      }
+
+      if ([4, 6, 8].includes(guesses.length)) {
+        setIsHintsModalOpen(true)
       }
     }
   }

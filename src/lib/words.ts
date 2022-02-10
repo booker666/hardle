@@ -17,15 +17,16 @@ export const getWordOfDay = () => {
   const epochMs = new Date('January 1, 2022 00:00:00').valueOf()
   const now = Date.now()
   const msInDay = 86400000
-  const index = Math.floor((now - epochMs) / msInDay)
-  const nextday = (index + 1) * msInDay + epochMs
-  const word = WORDS[index % WORDS.length]
+  const interval = msInDay / 4
+  const index = Math.floor((now - epochMs) / interval)
+  const nextday = (index + 1) * interval + epochMs
+  const word = WORDS[index % WORDS.length].toUpperCase()
 
   return {
     solution: word.toUpperCase(),
     solutionIndex: index,
     tomorrow: nextday,
-    hints: [word[0], word[4], word[2]]
+    hints: [word[4], word[0], word[2]]
   }
 }
 
