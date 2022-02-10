@@ -1,7 +1,7 @@
 import { getGuessStatuses } from './statuses'
 import { solutionIndex } from './words'
 import { GAME_TITLE } from '../constants/strings'
-import { MAX_CHALLENGES, MAX_WORD_LENGTH } from '../constants/settings'
+import { MAX_CHALLENGES } from '../constants/settings'
 
 export const shareStatus = (guesses: string[], lost: boolean) => {
   navigator.clipboard.writeText(
