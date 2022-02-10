@@ -25,7 +25,13 @@ export const Grid = ({ guesses, currentGuess, hardMode, blindMode }: Props) => {
         ))}
       </div>*/}
       {guesses.map((guess, i) => (
-        <CompletedRow key={i} guess={guess} hardMode={hardMode} blindMode={blindMode} round={i} />
+        <CompletedRow
+          key={i}
+          guess={guess}
+          hardMode={hardMode}
+          blindMode={blindMode}
+          round={i}
+        />
       ))}
       {guesses.length < MAX_CHALLENGES && <CurrentRow guess={currentGuess} />}
       {/*{empties.map((_, i) => (

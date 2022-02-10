@@ -10,7 +10,8 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
     <BaseModal title="How to play" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-gray-500 dark:text-gray-300">
-        Guess an 5 letter word in 10 tries. It has two harder playing mechanism.
+        Guess an 5 letter word in 10 tries. It's a harder version of original
+        wordle.
       </p>
       <p className="text-sm text-gray-500 dark:text-gray-300">
         Instead of showing green and yellow, only showing blue if a letter is

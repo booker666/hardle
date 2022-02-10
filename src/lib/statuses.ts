@@ -1,6 +1,6 @@
 import { solution } from './words'
 
-export type CharStatus = 'absent' | 'present' | 'correct'
+export type CharStatus = 'absent' | 'present' | 'correct' | 'masked'
 
 export type CharValue =
   | 'Q'
@@ -76,6 +76,10 @@ export const getGuessStatuses = (guess: string): CharStatus[] => {
   })
 
   splitGuess.forEach((letter, i) => {
+    if (letter === ' ') {
+      statuses[i] = 'masked'
+      return
+    }
     if (statuses[i]) return
 
     if (!splitSolution.includes(letter)) {

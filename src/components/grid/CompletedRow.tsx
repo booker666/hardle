@@ -1,5 +1,5 @@
 import { getGuessStatuses } from '../../lib/statuses'
-import { solution } from '../../lib/words'
+import { solution, maskGuess } from '../../lib/words'
 import { CompletedCell } from './CompletedCell'
 
 type Props = {
@@ -14,13 +14,9 @@ export const CompletedRow = ({ guess, hardMode, blindMode, round }: Props) => {
     blindMode = false
     hardMode = false
   }
-  const residue = round % 2
   var masked_guess = ''
   if (blindMode) {
-    guess.split('').forEach((letter, i) => {
-      if (i % 2 === residue) masked_guess += letter
-      else masked_guess += ' '
-    })
+    masked_guess = maskGuess(guess, round)
   } else {
     masked_guess = guess
   }
@@ -29,7 +25,7 @@ export const CompletedRow = ({ guess, hardMode, blindMode, round }: Props) => {
     <div className="flex justify-center mb-1">
       {guess.split('').map((letter, i) => {
         if (blindMode) {
-          if (i % 2 === residue)
+          if (statuses[i] === 'masked')
             return (
               <CompletedCell
                 key={i}

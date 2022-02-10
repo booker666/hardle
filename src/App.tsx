@@ -8,7 +8,7 @@ import {
   EyeIcon,
   EyeOffIcon,
   LockClosedIcon,
-  LockOpenIcon
+  LockOpenIcon,
 } from '@heroicons/react/outline'
 import { useState, useEffect } from 'react'
 import { Alert } from './components/alerts/Alert'
