@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/hardle/static/css/main.b047665a.css",
-    "main.js": "/hardle/static/js/main.94333163.js",
+    "main.js": "/hardle/static/js/main.d6ca37b6.js",
     "static/js/787.b3f9d252.chunk.js": "/hardle/static/js/787.b3f9d252.chunk.js",
     "index.html": "/hardle/index.html",
     "main.b047665a.css.map": "/hardle/static/css/main.b047665a.css.map",
-    "main.94333163.js.map": "/hardle/static/js/main.94333163.js.map",
+    "main.d6ca37b6.js.map": "/hardle/static/js/main.d6ca37b6.js.map",
     "787.b3f9d252.chunk.js.map": "/hardle/static/js/787.b3f9d252.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b047665a.css",
-    "static/js/main.94333163.js"
+    "static/js/main.d6ca37b6.js"
   ]
 }
