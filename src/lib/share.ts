@@ -16,8 +16,7 @@ export const generateEmojiGrid = (guesses: string[]) => {
     guesses
       .map((guess, idx) => {
         const status = getGuessStatuses(guess)
-        const result = guess
-          .padEnd(MAX_WORD_LENGTH, '-')
+        return guess
           .split('')
           .map((_, i) => {
             switch (status[i]) {
@@ -30,7 +29,6 @@ export const generateEmojiGrid = (guesses: string[]) => {
             }
           })
           .join('')
-        return `${idx + 1}. ${result}`
       })
       .join('\n') + '\n\nhttps://booker666.github.io/hardle'
   )
